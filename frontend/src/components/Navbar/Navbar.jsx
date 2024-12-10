@@ -114,6 +114,7 @@ export default function Navbar() {
     { text: "Dashboard", icon: <BarChartOutlined style={{ color: "#000", fontSize: '18px' }} />, link: "", disabled: !(globalPermissions.includes(`dashboard.read`)) },
     // { text: "Orders", icon: <ProductFilled style={{color:"#000", fontSize: '18px'}} />, link: "table/master", disabled: !(globalPermissions.includes(`master.read`)) },
     // { text: "Spot", icon: <VideoCameraFilled style={{color:"#000", fontSize: '18px'}} />, link: "live-detection",  disabled: !(globalPermissions.includes(`spot.read`)) },
+    { text: "Timesheets", icon: <ProductFilled style={{color:"#000", fontSize: '18px'}} />, link: "timesheets",  disabled: !(globalPermissions.includes(`timesheets.read`)) },
     { text: "Settings", icon: <SettingFilled style={{ color: "#000", fontSize: '18px' }} />, link: "settings" },
   ];
 

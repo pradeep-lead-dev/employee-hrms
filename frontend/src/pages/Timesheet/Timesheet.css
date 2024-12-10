@@ -1,0 +1,98 @@
+
+
+.timesheet-container {
+    width: 100%;
+    margin-left: 12%;
+    border: 1px solid #1b1919;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+  
+  .total-hours {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .month-selector {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start; }
+  
+  .month-selector label {
+    font-size: 0.9rem; 
+    font-weight: 500;  
+    color: #333; 
+    margin-bottom: 5px; 
+    text-align: left; 
+  }
+  
+  .month-selector .year-selector, 
+  .month-selector .month-selector, 
+  .month-selector .week-selector {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 10px; 
+    width: 100%; 
+  }
+  
+  .month-selector select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    width: 50%; 
+  }
+  
+  .month-selector select:focus {
+    border-color: #1890ff; 
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 40%;
+    margin: 20px auto;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0050b3;
+  }
+  
+  @media (max-width: 768px) {
+    .timesheet-container {
+      margin-left: 5%;
+      padding: 15px;
+    }
+  
+    .month-selector select {
+      width: 90%; 
+    }
+  
+    button[type="submit"] {
+      width: 70%; 
+    }
+  }
+  
+  
+  
+  
+  
+   

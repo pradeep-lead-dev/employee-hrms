@@ -1,0 +1,19 @@
+.view-timesheet-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+ 
+.form-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+ 
+.form-container .ant-select {
+    margin-right: 10px;
+}
+ 
+.ant-table {
+    background: white;
+}

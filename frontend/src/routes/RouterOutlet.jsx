@@ -13,6 +13,7 @@ import DynamicForm from '../components/DynamicForm/DynamicForm';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 import PrivacyPolicy from '../components/PrivacyPolicy/PrivacyPolicy';
 import { AuthContext } from '../context/AuthContext';
+import Timesheet from '../pages/Timesheet/Timesheet';
 
 const RouterOutlet = () => {
     const { globalPermissions } = useContext(AuthContext)
@@ -21,6 +22,7 @@ const RouterOutlet = () => {
             {globalPermissions.includes('dashboard.read') && <Route path="/" element={<Dashboard />} />}
             {/* {globalPermissions.includes('spot.read') && <Route path="/live-detection" element={<LiveDetection />} />} */}
             <Route path="/settings" element={<Settings />} />
+            <Route path="/timesheets" element={<Timesheet />} />
             <Route path="/forms" element={<FormBuilder />} />
             <Route path="/forms/:id" element={<FormBuilder isUpdate={true} />} />
             <Route path="/roles" element={<Roles />} />
