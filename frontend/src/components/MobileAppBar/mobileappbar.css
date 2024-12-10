@@ -1,0 +1,10 @@
+.mobile-navigation-bottom *{
+    font-family: 'Noto Sans' !important;
+}
+@media (max-width: 392px) {
+    .mobile-navigation-bottom{
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+  

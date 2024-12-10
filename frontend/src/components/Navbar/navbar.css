@@ -1,0 +1,199 @@
+/* Apply hover effects and styles for active menu items */
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-20bmp1-MuiSvgIcon-root {
+    color: #454545;
+
+}
+
+.dropdown-arrow {
+    font-size: 1.2em;
+    /* Adjust size as needed */
+    transition: transform 0.3s ease;
+    /* Smooth transition */
+}
+
+.navbar-icon .dropdown-arrow:hover {
+    transform: translateX(5px);
+    /* Optional hover effect */
+}
+
+.css-zow5z4-MuiGrid-root{
+    margin-top: -14px !important;
+}
+
+.menu-item {
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #857a7a;
+}
+
+.menu-item img {
+    filter: grayscale(100%);
+}
+
+.menu-item.active img {
+    filter: none;
+}
+
+.imgflex {
+    background-color: #ffff;
+}
+
+.indicator {
+    position: absolute;
+    background-color: #252835;
+    width: 4px;
+    border-radius: 2px;
+}
+
+
+
+
+
+@keyframes rotateAntiClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotate-logo {
+    animation: rotateAntiClockwise 18s linear infinite;
+    /* Adjust duration as needed */
+}
+
+/* Default left and right padding for all pages */
+
+.MuiBox-root.css-26ny9l {
+    flex-direction: column 1 !important;
+}
+
+/* Adjust left and right padding for smaller screens */
+
+.tooltip-margin {
+    z-index: 999;
+    /* Make sure tooltip appears above other elements */
+}
+
+
+@media (max-width: 768px) {
+    #main {
+        margin-bottom: 80px;
+
+    }
+}
+
+@media (max-width: 576px) {
+    #main {
+        margin-bottom: 80px;
+
+    }
+}
+
+
+
+/* Ensure the sidebar has a lower z-index */
+#sidebar {
+    z-index: 1000;
+
+}
+
+/* navbar.css */
+
+/* Hide the main sidebar on mobile */
+@media (max-width: 768px) {
+    .navbar-icon {
+        display: none;
+        /* Hide the sidebar */
+    }
+
+    /* Show the mobile tab bar */
+    .mobile-tab-bar {
+        display: flex;
+        /* Ensure it displays on mobile */
+        position: fixed;
+        /* Fix it to the bottom or top */
+        bottom: 0;
+        /* Position it at the bottom */
+        left: 0;
+        right: 0;
+        background-color: white;
+        /* Adjust background color */
+        z-index: 1000;
+        /* Ensure it is on top of other content */
+    }
+}
+
+/* Show the main sidebar on larger screens */
+@media (min-width: 769px) {
+    .navbar-icon {
+        display: flex;
+        /* Show the sidebar */
+    }
+
+    /* Hide the mobile tab bar on larger screens */
+    .mobile-tab-bar {
+        display: none;
+        /* Hide it on larger screens */
+    }
+}
+
+/* navbar.css */
+
+/* Hide the sidebar on mobile */
+@media (max-width: 768px) {
+    .navbar-icon {
+        display: none;
+        /* Hide the sidebar */
+    }
+
+    /* Show the mobile tab bar */
+    .mobile-tab-bar {
+        display: flex;
+        /* Ensure it displays on mobile */
+        position: fixed;
+        /* Fix it to the bottom */
+        bottom: 0;
+        /* Position it at the bottom */
+        left: 0;
+        right: 0;
+        background-color: white;
+        /* Adjust background color */
+        z-index: 1000;
+        /* Ensure it is on top of other content */
+    }
+}
+
+/* Show the sidebar on larger screens */
+@media (min-width: 769px) {
+    .navbar-icon {
+        display: flex;
+        /* Show the sidebar */
+    }
+
+    /* Hide the mobile tab bar on larger screens */
+    .mobile-tab-bar {
+        display: none;
+        /* Hide it on larger screens */
+    }
+}
+
+.mobile-navigation-bottom{
+    font-family: 'Noto Sans' !important;
+}

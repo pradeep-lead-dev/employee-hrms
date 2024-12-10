@@ -1,0 +1,89 @@
+/* PrivacyPolicy.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.privacy-layout {
+  background-color: #ffffff; /* White background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy-content {
+  flex: 1;
+  margin: 0 auto;
+  padding: 60px;
+  max-width: 1200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.privacy-title {
+  text-align: center;
+  font-weight: 600;
+  color: #333; /* Dark text for title */
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.section-title {
+  margin-top: 24px;
+  font-weight: 500;
+  color: #000; /* Black color for section titles */
+  border-bottom: 2px solid #000; /* Black underline */
+  padding-bottom: 10px;
+  transition: color 0.3s;
+}
+
+.section-title:hover {
+  color: #e74c3c; /* Hover effect with red */
+}
+
+.privacy-paragraph,
+.privacy-intro {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333; /* Dark text for paragraphs */
+  margin-bottom: 24px;
+}
+
+.privacy-footer {
+  background-color: #ffffff; /* White background for footer */
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #000; /* Black line on top of footer */
+}
+
+.copyright {
+  color: #555; /* Dark grey for copyright text */
+}
+
+/* Modal styling */
+.ant-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000; /* Black title in the modal */
+}
+
+.ant-modal-footer button {
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Scroll-to-top button customization */
+.ant-back-top {
+  background-color: #000; /* Black back-to-top button */
+  color: #fff;
+}
+
+.ant-back-top:hover {
+  background-color: #e74c3c; /* Red hover for back-to-top button */
+}

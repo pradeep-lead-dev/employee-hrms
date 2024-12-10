@@ -1,0 +1,91 @@
+/* Mobile Tab Bar Basic Styling */
+.mobilebar-container {
+  border-top-left-radius: 20px;
+  border-top-right-radius:20px;
+  position: fixed; /* Fix t the bottom */
+  bottom: 0; /* Stick to the bottom of the screen */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* Max width on small screens */
+  background-color: #fff; /* Adjust the background color */
+  padding: 10px 20px; /* Add padding for the entire tab bar */
+  z-index: 1000;
+  transition: all 0.3s ease; /* Smooth transitions for visibility */
+}
+.mobile-avatar{
+margin-top: -2px;
+}
+
+/* Remove the slide-up animation */
+.mobilebar-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobilebar-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobilebar-tab {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.mobilebar-tab-item {
+  flex: 1; /* Ensure items share equal space */
+  text-align: center;
+  padding: 10px 0; /* Add padding for tap targets */
+  cursor: pointer;
+}
+
+.mobile-img {
+  width: 60px !important;
+  margin-top: 8px;
+}
+
+.mobilebar-tab__icon {
+  display: flex;
+  flex-direction: column; /* Stack icon and text */
+  align-items: center;
+  color: #888; /* Default icon color */
+  
+}
+
+.mobilebar-tab__text {
+  font-size: 12px; /* Adjust font size */
+  color: #888; /* Default text color */
+}
+
+/* Active state */
+.mobilebar-tab-item.active .mobilebar-tab__icon {
+  color: #25D366; /* WhatsApp green for active icon */
+}
+
+.mobilebar-tab-overlay {
+  position: absolute;
+  height: 4px;
+  background-color: #25D366; 
+  transition: left 0.3s ease; 
+}
+
+@media (max-width: 576px) {
+  .mobilebar-container {
+   
+    padding: 6px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .mobilebar-container {
+   
+    border-radius: 40px; 
+  }
+
+  .mobilebar-tab__text {
+    font-size: 14px;
+  }
+}

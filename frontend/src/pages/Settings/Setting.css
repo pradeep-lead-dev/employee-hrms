@@ -1,0 +1,69 @@
+.settings-page{
+  padding: 20px;
+  padding-top: 80px;
+}
+
+
+.card-container {
+  padding: 15px; /* Padding around the card container */
+}
+.custom-card {
+  text-align: center;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  height: 220px;
+  justify-content: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01);
+  /* transition: box-shadow 0.3s ease; Smooth transition for box shadow */
+  padding: 16px; /* Add some padding for better spacing */
+}
+.custom-card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* .custom-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.card-image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px; /* Space below image */
+  object-fit: contain; /* Ensure image fits within bounds */
+}
+
+.card-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-description {
+  color: gray;
+  margin: 0;
+}
+/* Setting.css */
+
+.flip-up-enter {
+transform: translateX(-100%);
+opacity: 0;
+}
+
+.flip-up-enter-active {
+transform: translateX(0);
+opacity: 1;
+transition: transform 600ms ease-in-out, opacity 600ms ease-in-out;
+}
+
+.flip-up-exit {
+transform: translateX(0);
+opacity: 1;
+}
+
+.flip-up-exit-active {
+transform: translateX(-100%);
+opacity: 0;
+transition: transform 600ms ease-in-out, opacity 600ms ease-in-out;
+}

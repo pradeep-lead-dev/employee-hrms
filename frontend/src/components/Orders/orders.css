@@ -1,0 +1,134 @@
+/* Order Page Styling */
+.orderpage {
+  padding-top:0px;/* Add default padding for all devices */
+  }
+  
+  /* Date Filter Wrapper */
+  .date-filter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+  
+  /* Date Filter Container */
+  .date-filter-container {
+    display: flex;
+    margin-top: 10px;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  
+  input {
+    width: 150px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .reset-button, .export-button {
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  /* Grid Wrapper */
+  .grid-wrapper {
+    height: 420px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px; /* Add padding inside the grid */
+    padding-right: 13px;
+  }
+  
+  /* Media Query for Tablets and Small Screens (Max Width: 768px) */
+  @media (max-width: 768px) {
+    .orderpage {
+      padding: 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .date-filter-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    input {
+      margin-bottom: 10px;
+      width: 100%; /* Full width input for smaller screens */
+    }
+  
+    .reset-button, .export-button {
+      margin-top: 10px;
+      width: 100%; /* Full width buttons for smaller screens */
+    }
+  
+    .date-filter-container {
+      flex-direction: column;
+      width: 100%; /* Full width for smaller screens */
+    }
+  
+    .record-exports {
+      margin-inline-start: auto;
+    }
+  
+    .grid-wrapper {
+      height: auto; /* Allow grid height to adjust */
+      padding: 15px; /* Adjust padding inside the grid for small screens */
+    }
+  }
+  
+  /* Media Query for Mobile Devices (Max Width: 576px) */
+  @media (max-width: 576px) {
+    .orderpage {
+      padding: 10px; /* Smaller padding for mobile devices */
+    }
+  
+    .date-filter-wrapper {
+      padding: 10px;
+    }
+  
+    .date-filter-container {
+      gap: 10px; /* Increase gap between items on mobile */
+      width: 100%; /* Full width container */
+    }
+  
+    .reset-button, .export-button {
+      width: 100%; /* Full width buttons for mobile */
+      margin: 10px 0; /* Add margin for spacing between buttons */
+    }
+  
+    .grid-wrapper {
+      padding: 10px; /* Smaller padding for mobile */
+    }
+  }
+  
+  /* Date Range Picker Styling */
+  .daterang-picker-style {
+    width: fit-content !important;
+  }
+  
+  /* Total Count Footer */
+  .total-count-footer {
+    margin-top: 15px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Orders Container Styling */
+  .orders-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    justify-content: space-between; /* Add some padding */
+  }
+  
+  /* Flex Layout for Filters, Buttons, and Table */
+  .date-range-filter,
+  .export-buttons,
+  .table {
+    flex: 0 1 auto; /* Flex-grow: 0, flex-shrink: 1, flex-basis: auto */
+  }

@@ -1,0 +1,244 @@
+/* Main Dashboard Page Padding */
+.dashboard-page {
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-top: 5px;
+  margin-top: 70px;
+  
+}
+
+/* Dashboard Card Styling */
+.dashboard-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Hover Effect for Cards */
+.dashboard-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  /* Slightly lift and enlarge card */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  /* Darker shadow */
+  filter: brightness(1.05);
+  /* Slightly increase brightness */
+}
+
+/* Background Pattern for Cards */
+.card-background-pattern {
+  position: absolute;
+  top: 0;
+  /* Ensure it starts from the top */
+  left: -14% !important;
+  /* Slightly offset to the left */
+  width: 140% !important;
+  /* Make sure it covers only the left part */
+  height: 100%;
+  mask: url('/dotspot-react-app/src/pages/Dashboard/border.svg') left / contain no-repeat;
+  -webkit-mask: url('/dotspot-react-app/src/pages/Dashboard/border.svg') left / contain no-repeat;
+  background-color: currentColor !important;
+  opacity: 0.4 !important;
+  /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+/* Card Content Styling */
+.card-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  /* Align content to the left */
+  color: #333;
+  padding: 20px;
+}
+
+/* Icon in Cards */
+.card-icon {
+  margin-bottom: 15px;
+  display: inline-block;
+  color: inherit;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 18px;
+  margin: 8px 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Card Stat */
+.card-stat {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Full-width class for content */
+.w-full {
+  width: fit-content !important;
+}
+
+/* Responsive Adjustments */
+
+/* For Tablets and Small Screens (Max Width: 768px) */
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding-right: 5px !important;
+    padding-left: 8px !important;
+  }
+
+  .dashboard-card {
+    padding: 15px;
+    border-radius: 12px;
+    /* Reduce border-radius for smaller screens */
+  }
+
+  .card-title {
+    font-size: 16px;
+    /* Smaller title size for tablets */
+  }
+
+  .card-stat {
+    font-size: 20px;
+    /* Adjust stat size for smaller screens */
+  }
+
+  .card-content {
+    padding: 15px;
+    /* Reduce padding for content */
+  }
+}
+
+/* For Mobile Devices (Max Width: 576px) */
+@media (max-width: 576px) {
+  .dashboard-page {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .dashboard-card {
+    padding: 10px;
+    border-radius: 10px;
+    /* Even smaller border-radius for mobile */
+    transform: scale(1);
+    /* Remove hover scaling on mobile for stability */
+  }
+
+  .card-title {
+    font-size: 14px;
+    /* Smaller title size for mobile */
+  }
+
+  .card-stat {
+    font-size: 18px;
+    /* Adjust stat size for mobile */
+  }
+
+  .card-content {
+    padding: 10px;
+    /* Reduce padding for content */
+  }
+
+  .card-icon {
+    margin-bottom: 10px;
+    /* Adjust spacing for mobile */
+  }
+
+  /* Adjust the background pattern for mobile */
+  .card-background-pattern {
+    left: -10% !important;
+    /* Adjust pattern position for mobile */
+    width: 130% !important;
+    /* Adjust width for mobile */
+  }
+}
+
+/* For Extra Small Mobile Devices (Max Width: 375px) */
+@media (max-width: 375px) {
+  .dashboard-page {
+    padding-right: 5px;
+    padding-left: 8px;
+
+  }
+}
+
+@media (max-width: 375px) {
+  .dashboard-page {
+    padding-right: 5px;
+    padding-left: 5px;
+
+  }
+
+  .dashboard-card {
+    padding: 8px;
+    border-radius: 8px;
+    /* Even smaller border-radius for extra small devices */
+  }
+
+  .card-title {
+    font-size: 12px;
+    /* Smaller title size for extra small devices */
+  }
+
+  .card-stat {
+    font-size: 16px;
+    /* Adjust stat size for extra small devices */
+  }
+
+  .card-content {
+    padding: 8px;
+    /* Minimal padding for content */
+  }
+
+  .card-icon {
+    margin-bottom: 8px;
+    /* Adjust spacing for extra small screens */
+  }
+
+  /* Further adjustments for background pattern */
+  .card-background-pattern {
+    left: -8% !important;
+    /* Slight adjustment for extra small devices */
+    width: 125% !important;
+    /* Adjust width for extra small devices */
+
+    
+  }
+  
+ 
+  }
+   @media (max-width: 600px) {
+     .ant-picker-panels {
+      flex-direction: column;
+    }
+  }
+
+/* Default styles for segmentation */
+.segmented-control {
+  display: flex;
+  justify-content: center;
+  white-space: "nowrap" !important;
+  margin: 20px 0;
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 600px) {
+  .segmented-control {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .segmented-control > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+}

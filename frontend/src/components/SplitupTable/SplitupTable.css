@@ -1,0 +1,97 @@
+.splitup-table-wrapper {
+    padding: 16px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .splitup-table-wrapper .ant-table {
+    table-layout: auto !important; /* Ensure table adapts to content */
+    width: 100% !important; /* Ensure the table takes full width */
+  }
+  
+  /* Desktop View: Keep the padding you prefer */
+  @media (min-width: 581px) {
+    .splitup-table-wrapper .ant-table-cell {
+      padding: 16px !important; /* Maintain padding for desktop view */
+    }
+    
+  
+  
+    .splitup-table-wrapper .mobile-label {
+      display: none !important; /* Hide the label for the desktop view */
+    }
+  }
+  
+  /* Mobile View: Minimize padding and remove hover effects */
+  @media (max-width: 580px) {
+    .splitup-table-wrapper .ant-table-summary-row {
+      display: flex;
+      flex-direction: column !important;
+      align-items: flex-start;
+    }
+  
+    .splitup-table-wrapper .ant-input-number,
+    .splitup-table-wrapper .ant-select {
+      width: 100% !important;
+      font-size: 14px;
+      margin-bottom: 4px !important; /* Reduced margin between fields */
+    }
+  
+    .splitup-table-wrapper .ant-table-cell {
+      padding: 4px !important; /* Reduced padding for mobile view */
+    }
+  
+    .splitup-table-wrapper #total-target,
+    .splitup-table-wrapper #total-actual {
+      width: 100% !important;
+    }
+  
+    .splitup-table-wrapper .ant-table-thead {
+      display: none; /* Hide table header on small screens */
+    }
+  
+    .splitup-table-wrapper .ant-table-row {
+      display: block; /* Stack table rows */
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .splitup-table-wrapper .ant-table-cell {
+      display: block;
+      width: 100%; /* Ensure each cell takes full width */
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  
+    /* Sticky labels for mobile */
+    .splitup-table-wrapper .ant-table-cell::before,
+    .splitup-table-wrapper .mobile-label {
+      content: attr(data-label); /* Show labels for each cell in mobile view */
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+      background-color: white; /* Ensure it's visible with background */
+    }
+  
+    .splitup-table-wrapper .mobile-label {
+      display: block !important; /* Ensure mobile labels are shown */
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+  
+    .splitup-table-wrapper .ant-btn {
+      width: auto !important; /* Keep button size unchanged */
+      margin-bottom: 10px;
+    }
+  
+    /* Remove hover effect in mobile view */
+    .splitup-table-wrapper .ant-input-number:hover,
+    .splitup-table-wrapper .ant-select:hover,
+    .splitup-table-wrapper .ant-btn:hover {
+      background-color: transparent !important; /* Remove hover background color */
+    }
+    
+    .splitup-table-wrapper .ant-select, 
+    .splitup-table-wrapper .ant-input-number {
+      border-radius: 0 !important; /* Remove any border radius if not needed */
+    }
+  }
+  

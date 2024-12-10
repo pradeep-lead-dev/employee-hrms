@@ -1,0 +1,90 @@
+/* Header.css */
+
+/* Basic styling for the fixed header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-left:60px;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 20px;
+
+    z-index: 1000;
+  }
+  .header-divider {
+    margin: 5.5px;
+    color: #333 !important;
+    width: 100%;
+}
+
+  /* Flexbox for aligning logo and title */
+  .header-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  /* Logo styling */
+  .header-logo {
+    margin-right: 50px;
+  }
+  
+  /* Title styling */
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333 !important;
+  }
+  
+
+  /* Responsive media queries */
+  @media (max-width: 768px) {
+    /* For tablets and smaller devices */
+    .header{
+        margin-left:0px;
+ 
+    }
+    .header-title {
+      font-size: 20px;
+    }
+  
+    /* .header-logo {
+      height: 35px; /* Adjust logo size */
+    /* } */ 
+  
+    .header {
+      padding: 10px 15px; /* Reduce padding */
+    }
+  
+  
+  }
+  @media (max-width: 320px) {
+    .header{
+        margin-left:0px;
+ 
+    }
+  }
+  @media (max-width: 480px) {
+    /* For mobile phones */
+      /* For tablets and smaller devices */
+      .header{
+        margin-left:0px;
+ 
+    }
+    .header-title {
+      font-size: 18px;
+    }
+  
+    .header-logo {
+      /* height: 30px; Further reduce logo size */
+      margin-right: 10px; /* Reduce margin between logo and title */
+    }
+  
+    .header {
+      padding: 8px 10px; /* Reduce padding for small screens */
+    }
+
+  }
+  

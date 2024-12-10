@@ -1,0 +1,79 @@
+/* General page padding */
+.export-page {
+    padding: 20px !important;
+}
+
+.tolowercase{
+    text-transform: capitalize !important;
+}
+/* Responsive for mobile and smaller screens (less than 768px) */
+@media (max-width: 768px) {
+    /* Fixed position for export button or header */
+    .export-fixed {
+        position: fixed;
+        top: 0;
+        width: 95%; /* Take 90% width for small screens */
+        z-index: 1000;
+        background-color: white;
+        padding: 4px; /* Padding to give some spacing */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Shadow for elevation */
+    }
+
+    /* Mobile table adjustments */
+    .mobile-table {
+        position: sticky;
+        margin-top: 185px;
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
+    }
+
+    /* Adjust mobile table container */
+    .mobile-table .ag-theme-quartz {
+     margin-bottom: 75px; 
+     --ag-cell-horizontal-border: solid rgb(150, 150, 200);
+     /* Add margin for space at the bottom */
+    }
+}
+
+/* For tablets and larger screens */
+@media (min-width: 768px) {
+    /* Static position for export button or header */
+    .export-fixed {
+        position: static; /* No fixed position for larger screens */
+        width: 100%; /* Full width */
+        box-shadow: none; /* Remove box shadow */
+        padding: 0; /* Remove padding for cleaner look */
+    }
+
+    /* Static position for the table */
+    .mobile-table {
+        position: static; /* No sticky behavior on larger screens */
+        margin-top: 0; /* Reset margin */
+        width: 100%; /* Ensure full width */
+        box-shadow: none; /* Remove shadow for larger screens */
+    }
+}
+
+/* Additional media query for extra-large screens */
+@media (min-width: 1200px) {
+    .export-page {
+        padding: 40px; /* Increase padding for larger screens */
+    }
+
+    .export-fixed {
+        padding: 8px; /* Adjust padding for larger screens */
+    }
+
+    .mobile-table {
+        padding: 20px; /* Increase padding for larger table spacing */
+    }
+}
+.ag-theme-quartz {
+    /* disable all borders */
+   
+    --ag-cell-horizontal-border: solid rgb(198, 198, 203);
+    --ag-header-cell-resize: solid rgb(198, 198, 203) !important;
+    --ag-header-cell: solid rgb(198, 198, 203) !important; 
+   }
