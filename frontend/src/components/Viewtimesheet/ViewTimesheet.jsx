@@ -48,13 +48,13 @@ const ViewTimesheet = () => {
  
   const fetchTimesheetData = async () => {
     try {
-      const token = localStorage.getItem('dotconnectoken');
+      const token = localStorage.getItem('dotoken');
       if (!token) {
         message.error('User token is missing. Please log in again.');
         return;
       }
  
-      const parsedToken = JSON.parse(token);
+      // const parsedToken = JSON.parse(token);
       const selectedWeekRange = weeks.find((week) => week.label === selectedWeek);
  
       if (!selectedWeekRange) {
@@ -63,8 +63,8 @@ const ViewTimesheet = () => {
       }
  
       // Send the start and end dates to the backend
-      const response = await axios.get('http://localhost:8000/view-timesheet', {
-        headers: { Authorization: `Bearer ${parsedToken.userToken}` },
+      const response = await axios.get('http://localhost:8001/view-timesheet', {
+        headers: { Authorization: `Bearer ${token}` },
         params: {
           start: moment(selectedWeekRange.start).format('YYYY-MM-DD'),
           end: moment(selectedWeekRange.end).format('YYYY-MM-DD'),

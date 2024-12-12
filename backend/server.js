@@ -154,13 +154,13 @@ app.post('/save-timesheet', authMiddleware, async (req, res) => {
  
           return res.status(200).json({ message: 'Timesheet updated successfully!' });
       }
- 
-     
+      
+      
       timesheet = new Timesheet({
-          employeeId: req.employeeId,
-          employeeName: req.employeeName,
-          workingHours,
-          totalWeeklyHours,
+        employeeId: req.employeeId,
+        employeeName: req.employeeName,
+        workingHours,
+        totalWeeklyHours,
       });
  
       await timesheet.save();
@@ -193,7 +193,9 @@ app.get('/view-timesheet', async (req, res) => {
   }
  
   try {
-    const decodedToken = jwt.verify(token, 'secretKey123');
+    console.log(token);
+    
+    const decodedToken = jwt.verify(token, 'D0ts1t012345!');
     const { _id: employeeId } = decodedToken;
  
     const { start, end } = req.query;

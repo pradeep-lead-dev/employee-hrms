@@ -61,17 +61,22 @@ const Timesheet = () => {
  
     const fetchTimesheetData = async () => {
         try {
-            const token = localStorage.getItem('dotconnectoken');
+            const token = localStorage.getItem('dotoken');
+           
+            
+            
+
             if (!token) {
                 message.error('User token is missing. Please log in again.');
                 return;
             }
- 
-            const parsedToken = JSON.parse(token);
-            const response = await axios.get('http://localhost:8000/get-timesheet', {
-                headers: { Authorization: `Bearer ${parsedToken.userToken}` },
+          
+            // const parsedToken = JSON.parse(token);
+            const response = await axios.get('http://localhost:8001/get-timesheet', {
+                headers: { Authorization: `Bearer ${token}` },
                 params: { month: selectedMonth },
             });
+            
  
             if (response.status === 200) {
                 const { workingHours } = response.data;
@@ -106,22 +111,24 @@ const Timesheet = () => {
  
     const handleSubmit = async () => {
         try {
-            const token = localStorage.getItem('dotconnectoken');
+            const token = localStorage.getItem('dotoken');
             if (!token) {
+              
                 message.error('User token is missing. Please log in again.');
                 return;
             }
  
-            const parsedToken = JSON.parse(token);
+            // const parsedToken = JSON.parse(token);
             const workingHours = Object.entries(form.hours).map(([date, dailyHours]) => ({
                 date,
                 dailyHours,
             }));
  
             const response = await axios.post(
-                'http://localhost:8000/save-timesheet',
+                
+                'http://localhost:8001/save-timesheet',
                 { workingHours },
-                { headers: { Authorization: `Bearer ${parsedToken.userToken}` } }
+                { headers: { Authorization: `Bearer ${token}` } }
             );
  
             if (response.status === 201 || response.status === 200) {
